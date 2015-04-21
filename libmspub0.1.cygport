@@ -1,0 +1,26 @@
+NAME="libmspub0.1"
+VERSION=0.1.2
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="MS Publisher import filter library"
+DESCRIPTION="Libmspub is library providing ability to interpret and import
+Microsoft Publisher content into various applications."
+HOMEPAGE="https://wiki.documentfoundation.org/DLP/Libraries/libmspub"
+SRC_URI="http://dev-www.libreoffice.org/src/libmspub/libmspub-${VERSION}.tar.xz"
+SRC_DIR="libmspub-${VERSION}"
+PATCH_URI="0.0.3-ldflags.patch
+	   0.0.3-vpath.patch"
+
+PKG_NAMES="libmspub-tools ${NAME}_1 ${NAME}-devel ${NAME}-doc"
+libmspub_tools_CATEGORY="Graphics"
+libmspub_tools_OBSOLETES="libmspub-bin"
+libmspub_tools_SUMMARY="MS Publisher file converters"
+libmspub_tools_CONTENTS="usr/bin/*.exe"
+libmspub0_1_1_SUMMARY="${SUMMARY} (runtime)"
+libmspub0_1_1_CONTENTS="--exclude=html usr/bin/*-0.1-1.dll usr/share/doc/"
+libmspub0_1_devel_SUMMARY="${SUMMARY} (development)"
+libmspub0_1_devel_CONTENTS="usr/include/ usr/lib/"
+libmspub0_1_doc_SUMMARY="${SUMMARY} (API documentation)"
+libmspub0_1_doc_CONTENTS="usr/share/doc/${NAME}/html/"
+
+KEEP_LA_FILES="none"
