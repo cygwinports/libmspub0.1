@@ -1,6 +1,6 @@
 NAME="libmspub0.1"
-VERSION=0.1.2
-RELEASE=5
+VERSION=0.1.3
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="MS Publisher import filter library"
 DESCRIPTION="Libmspub is library providing ability to interpret and import
